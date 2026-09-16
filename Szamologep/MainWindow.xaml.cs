@@ -16,6 +16,8 @@ namespace Szamologep
     /// </summary>
     public partial class MainWindow : Window
     {
+        string szam1 = "";
+        List szam = new List();
         public MainWindow()
         {
             InitializeComponent();
@@ -44,7 +46,7 @@ namespace Szamologep
                     Button btn = new Button
                     {
                         Content = label,
-                        FontSize = 21,
+                        FontSize = 20,
                         FontWeight = FontWeights.Bold,
                         Margin = new Thickness(3)
                     };
@@ -76,7 +78,28 @@ namespace Szamologep
         {
             Button button = (Button)sender;
             string felirat = button.Content.ToString();
-            tb_kijelzo.Text = felirat;
+            if (tb_kijelzo.Text == "0")
+            {
+                tb_kijelzo.Text = felirat;
+            }
+            else
+            {
+                tb_kijelzo.Text += felirat;
+            }
+            
+            if (felirat.Contains("C"))
+            {
+                tb_kijelzo.Text = "0";
+            }
+            else if (felirat.Contains("1") || felirat.Contains("2") || felirat.Contains("3") || felirat.Contains("4") || felirat.Contains("5") || felirat.Contains("6") || felirat.Contains("7") || felirat.Contains("8") || felirat.Contains("9") || felirat.Contains("0"))
+            {
+                szam1 += felirat;
+            }
+            else if (felirat.Contains("+"))
+            {
+                for (int i = 0; i < szam.; i++) {
+            }
+
         }
     }
 }
