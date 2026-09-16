@@ -44,7 +44,7 @@ namespace Szamologep
                     Button btn = new Button
                     {
                         Content = label,
-                        FontSize = 20,
+                        FontSize = 21,
                         FontWeight = FontWeights.Bold,
                         Margin = new Thickness(3)
                     };
